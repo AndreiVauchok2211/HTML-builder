@@ -14,7 +14,7 @@ for(let file of files) {
    console.log(fileExtname);
    if(fileExtname === '.css') {
    
-const readerFiles = fs.createReadStream(path.join(pathToStules, nameFile));
+const readerFiles = fs.createReadStream(path.join(pathToStules, nameFile), 'utf-8');
 readerFiles.on('data', data => {
    stream.write(data);
 })
